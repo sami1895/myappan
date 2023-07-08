@@ -6,7 +6,7 @@ pipeline {
                 script{
                     checkout([$class: 'GitSCM', branches: [[name: '*/main']],
                         userRemoteConfigs: [[
-                            credentialsId: '22e9a5e1-7abb-4428-8021-b9242c527392',
+                            credentialsId: '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',
                             url: 'https://github.com/sami1895/myappan.git']]])
                 }
             }
