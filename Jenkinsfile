@@ -10,6 +10,27 @@ pipeline {
                             url: 'https://github.com/sami1895/myappan.git']]])
                 }
             }
+      
+      }
+      	stage('Install') {
+             steps{
+                script{
+                    sh "sudo npm install"
+                }
+            }
         }
+
+      
+
+         stage('build'){
+             steps{  
+                script{    
+                sh "ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml "
+                
+                }
+                }
+        }
+        
+
     }
 }
