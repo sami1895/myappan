@@ -2,8 +2,7 @@ Localhost ansible_connection=local
 
 [server]
 localhost
-[defaults]
-host_key_checking = False
+
 [server:vars]
 ansible_python_interpreter= /usr/bin/python3
 ansi_user= sami
