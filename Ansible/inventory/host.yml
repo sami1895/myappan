@@ -4,6 +4,6 @@ Localhost ansible_connection=local
 localhost
 
 [server:vars]
-ansible_python_interpreter= /usr/bin/python
+ansible_python_interpreter= /usr/bin/python3
 ansi_user= sami
 ansible_become_pass=azerty123
