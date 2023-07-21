@@ -21,7 +21,7 @@ pipeline {
 	
 			steps {
 			
-			sh "Ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml"
+			sh "ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml"
 	
 			}
 
@@ -42,7 +42,7 @@ pipeline {
 	stage('Docker') {
              steps{
                 script{
-                    sh "sudo Ansible-playbook Ansible/docker.yml -i Ansible/inventory/host.yml"
+                    sh "sudo ansible-playbook Ansible/docker.yml -i Ansible/inventory/host.yml"
                 }
             }
         }
