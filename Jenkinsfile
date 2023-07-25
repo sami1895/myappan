@@ -28,7 +28,35 @@ stage("test"){
         echo "test stage"
       }
     }
+	 stage ('Build') {
 	
+			steps {
+			
+			sh "ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml"
+	
+			}
+
+
+	}
+
+
+
+
+	//stage('ng Build') {
+          //   steps{
+             //   script{
+           //         sh "sudo ng build"
+                //}
+          //  }
+     //   }
+
+	stage('Docker') {
+             steps{
+                script{
+                    sh "sudo ansible-playbook Ansible/docker.yml -i Ansible/inventory/host.yml"
+                }
+            }
+        }
      
      
 
